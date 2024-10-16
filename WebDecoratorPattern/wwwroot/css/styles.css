@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: none;
+}
+
+.head {
+    width: 100px;
+    height: 100px;
+    background-color: #ffcccb;
+    border-radius: 50%;
+}
+
+.body {
+    width: 100px;
+    height: 150px;
+    background-color: #ffcccb;
+}
+
+.arms {
+    width: 140px;
+    height: 20px;
+    background-color: #ffcccb;
+    margin-top: -10px;
+}
+
+.legs {
+    width: 20px;
+    height: 100px;
+    background-color: #ffcccb;
+}
+
+/* Skin Color Change */
+.skin-armor {
+    background-color: silver !important;
+}
+
+/* Booster Animation */
+.boost-effect {
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px orange;
+    }
+    to {
+        box-shadow: 0 0 20px orange, 0 0 30px yellow, 0 0 40px yellow;
+    }
+}
+
+/* Visual effects */
+.action-visual {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Button Styles */
+.action-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.action-button:active {
+    background-color: #004085;
+}
+
+
+
